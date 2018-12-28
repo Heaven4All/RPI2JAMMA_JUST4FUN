@@ -1,0 +1,8 @@
+default;hdmi_timings=320 1 24 18 54 240 1 11 1 18 0 0 0 57 0 6400000 6
+Amiberry;hdmi_timings=320 1 24 18 54 240 1 11 1 18 0 0 0 57 0 6400000 6
+Daphne;hdmi_timings=320 1 24 18 54 240 1 11 1 18 0 0 0 57 0 6400000 6
+Reicast;hdmi_timings=320 1 24 18 54 240 1 11 1 18 0 0 0 57 0 6400000 6
+Scummvm;hdmi_timings=320 1 24 18 54 240 1 11 1 18 0 0 0 57 0 6400000 6
+Video_player;hdmi_timings=320 1 24 18 54 240 1 11 1 18 0 0 0 57 0 6400000 6
+MalditaCastilla;hdmi_timings=320 1 28 18 50 216 1 24 1 29 0 0 0 57 0 6400000 6
+SuperCrateBox;hdmi_timings=320 1 24 18 54 240 1 11 1 18 0 0 0 57 0 6400000 6

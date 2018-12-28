@@ -1,0 +1,32 @@
+--DAPHNE version 1.0.13
+--Command line is: /opt/RPI2JAMMA/emulateurs/daphne/daphne lair vldp -framefile /media/usb/roms/daphne/lair.daphne/lair.txt -homedir /opt/RPI2JAMMA/emulateurs/daphne/ 
+--CPU : UnknownCPU 0 MHz || Mem : 0 megs
+--OS : Linux 4.14 || Video : Unknown video
+--OpenGL: Compiled In
+--RGB2YUV Function: C
+--Line Blending Function: C
+--Audio Mixing Function: C
+Setting alternate home dir:
+/opt/RPI2JAMMA/emulateurs/daphne/
+Set 640x480 at 32 bpp with flags: 21
+Initializing sound system ... 
+GI Sound chip initialized at 2000000 Hz
+Joystick #0 was successfully opened
+Remapping input ...
+Loading compressed ROM image dl_f2_u1.bin...8192 bytes read.
+Loading compressed ROM image dl_f2_u2.bin...8192 bytes read.
+Loading compressed ROM image dl_f2_u3.bin...8192 bytes read.
+Loading compressed ROM image dl_f2_u4.bin...8192 bytes read.
+Framefile parse succeeded. Video/Audio directory is: /media/usb/roms/daphne/lair.daphne/./
+YUV overlay is done in software (ie unaccelerated).
+Booting ROM ...
+Play
+LDP : disc is already playing, play command ignored
+Play
+Display disable received
+Search to 323 received - [25] Attract Mode, Sequence 0 Attract Mode
+search succeeded d0
+Play
+Freeing memory used to store audio stream...
+Shutting down sound system...
+Shutting down video display...

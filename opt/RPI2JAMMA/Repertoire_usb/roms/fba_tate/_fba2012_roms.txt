@@ -1,0 +1,5 @@
+# RPI2JAMMA
+# if you want games to be loaded with fba 2012 libretro core
+# please put their zip names here
+# for example :
+# cotton.zip

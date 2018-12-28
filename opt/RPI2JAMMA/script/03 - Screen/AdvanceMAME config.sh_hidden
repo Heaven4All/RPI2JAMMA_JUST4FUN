@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+######################
+## RPI2XXXXX aje_fr ##
+######################
+clear
+echo 5 >/dev/rpi2x-intf
+setterm -foreground white
+sudo advcfg
+#>/dev/tty
+echo 0 >/dev/rpi2x-intf
+setterm -foreground black && clear
+sync
+clear

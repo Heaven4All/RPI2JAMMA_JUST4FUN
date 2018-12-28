@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+######################
+## RPI2XXXXX aje_fr ##
+######################
+
+clear
+echo "Clearing database" >/dev/tty
+sleep 2
+sudo rm -rf /home/pi/.emulationstation/gamelist.db
+sudo rm -rf /home/pi/.emulationstation/downloaded_images/

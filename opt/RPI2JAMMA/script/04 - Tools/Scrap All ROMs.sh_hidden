@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+######################
+## RPI2XXXXX aje_fr ##
+######################
+
+tput reset
+
+clear
+
+echo "Scrapping in progress"
+setterm -foreground white && clear
+while read nom_rep; do
+ echo "Traitement de : $nom_rep"
+ cd $nom_rep
+ if [ ! -f "gamelist.xml" ]
+ then
+  sudo /opt/RPI2JAMMA/script/04\ -\ Tools/scraper -max_width 1024 -max_height 768 -download_videos -console_src ss -ss_user="lavadrop" -ss_password="password"
+ else
+  sudo /opt/RPI2JAMMA/script/04\ -\ Tools/scraper -max_width 1024 -max_height 768 -download_videos -console_src ss -append -ss_user="lavadrop" -ss_password="password"
+ fi
+done < /opt/RPI2JAMMA/configs/Liste_rep_roms_consoles
+
+while read nom_rep; do
+ echo "Traitement de : $nom_rep"
+ cd $nom_rep
+ if [ ! -f "gamelist.xml" ]
+ then
+  sudo /opt/RPI2JAMMA/script/04\ -\ Tools/scraper -max_width 1024 -max_height 768 -mame -mame_img "t,m" -download_marquees -download_videos -ss_user="lavadrop" -ss_password="password"
+ else
+  sudo /opt/RPI2JAMMA/script/04\ -\ Tools/scraper -max_width 1024 -max_height 768 -mame -mame_img "t,m" -download_marquees -download_videos -append -ss_user="lavadrop" -ss_password="password"
+ fi
+done < /opt/RPI2JAMMA/configs/Liste_rep_roms_arcade
+setterm -foreground black && clear
+sudo reboot

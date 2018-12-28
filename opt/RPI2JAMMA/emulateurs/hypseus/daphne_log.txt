@@ -1,0 +1,19 @@
+--DAPHNE version 1.0.13
+--Command line is: ./daphne lair2 vldp -framefile /media/usb/roms/daphne/lair2.daphne/lair2.txt -homedir /opt/RPI2JAMMA/emulateurs/hypseus -nohwaccel -fastboot -fullscreen 
+--CPU : UnknownCPU 0 MHz || Mem : 0 megs
+--OS : Linux 4.14 || Video : Unknown video
+--OpenGL: Compiled In
+--RGB2YUV Function: C
+--Line Blending Function: C
+--Audio Mixing Function: C
+Setting alternate home dir:
+/opt/RPI2JAMMA/emulateurs/hypseus
+Set 640x480 at 16 bpp with flags: 20
+Initializing sound system ... 
+Joystick #0 was successfully opened
+Remapping input ...
+Loading compressed ROM image dl2_319.bin...65536 bytes read.
+Could not open framefile : /media/usb/roms/daphne/lair2.daphne/lair2.txt
+Could not initialize laserdisc player!
+Shutting down sound system...
+Shutting down video display...

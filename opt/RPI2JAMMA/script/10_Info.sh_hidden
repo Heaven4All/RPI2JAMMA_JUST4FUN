@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+######################
+## RPI2XXXXX aje_fr ##
+######################
+echo 5 >/dev/rpi2x-intf
+setterm -foreground white && clear
+cat /media/usb/Config_RPI2XXXXX/__Versions_informations__.txt | more
+read
+setterm -foreground black && clear
+echo 0 >/dev/rpi2x-intf
+sync
+clear

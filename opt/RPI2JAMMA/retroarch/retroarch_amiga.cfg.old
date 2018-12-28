@@ -1,0 +1,1369 @@
+#Config Retroarch RPI2JAMMA
+
+# Save all save files (*.srm) to this directory. This includes related files like .bsv, .rtc, .psrm, etc ...
+# This will be overridden by explicit command line options.
+savefile_directory = "default"
+
+# Save all save states (*.state) to this directory.
+# This will be overridden by explicit command line options.
+savestate_directory = "default"
+
+# If set to a directory, content which is temporarily extracted
+# will be extracted to this directory.
+cache_directory = "/var/tmp"
+
+# Save all input remapping files to this directory.
+input_remapping_directory = "/opt/RPI2JAMMA/retroarch/config/remaps"
+
+# Save all playlist files to this directory.
+playlist_directory = "/opt/RPI2JAMMA/retroarch/playlists"
+
+# If set to a directory, the content history playlist will be saved
+# to this directory.
+content_history_dir = ""
+
+# Automatically saves a savestate at the end of RetroArch's lifetime.
+# The path is $SRAM_PATH.auto.
+# RetroArch will automatically load any savestate with this path on startup if savestate_auto_load is set.
+savestate_auto_save = "false"
+savestate_auto_load = "false"
+
+# Load libretro from a dynamic location for dynamically built RetroArch.
+# This option is mandatory.
+
+# Path to a libretro implementation.
+# libretro_path = "/path/to/libretro.so"
+
+# A directory for where to search for libretro core implementations.
+libretro_directory = "/opt/RPI2JAMMA/retroarch/cores"
+
+# A directory for where to search for libretro core information.
+libretro_info_path = "/opt/RPI2JAMMA/retroarch/cores"
+
+# Sets log level for libretro cores (GET_LOG_INTERFACE).
+# If a log level issued by a libretro core is below libretro_log_level, it is ignored.
+# DEBUG logs are always ignored unless verbose mode is activated (--verbose).
+# DEBUG = 0, INFO = 1, WARN = 2, ERROR = 3.
+libretro_log_level = "0"
+
+# Enable or disable verbosity level of frontend.
+log_verbosity = "true"
+
+# If this option is enabled, every content file loaded in RetroArch will be
+# automatically added to a history list.
+history_list_enable = "false"
+
+# Enable or disable RetroArch performance counters
+perfcnt_enable = "false"
+
+# Path to core options config file.
+# This config file is used to expose core-specific options.
+# It will be written to by RetroArch.
+# A default path will be assigned if not set.
+# core_options_path = "/opt/RPI2JAMMA/configs"
+core_options_path = ""
+
+# Path to content history file.
+# RetroArch keeps track of all content loaded in the menu and from CLI directly for convenient quick loading.
+# A default path will be assigned if not set.
+content_history_path = "/opt/RPI2JAMMA/retroarch/content_history.lpl"
+
+# Path to music content history file (optional).
+# RetroArch keeps track of all music content loaded in the menu and from CLI directly for convenient quick loading.
+# A default path will be assigned if not set.
+content_music_history_path = "/opt/RPI2JAMMA/retroarch/content_music_history.lpl"
+
+# Path to image content history file (optional).
+# RetroArch keeps track of all image content loaded in the menu and from CLI directly for convenient quick loading.
+# A default path will be assigned if not set.
+content_image_history_path = "/opt/RPI2JAMMA/retroarch/content_image_history.lpl"
+
+# Path to video content history file (optional).
+# RetroArch keeps track of all video content loaded in the menu and from CLI directly for convenient quick loading.
+# A default path will be assigned if not set.
+content_video_history_path = "/opt/RPI2JAMMA/retroarch/content_video_history.lpl"
+
+# Number of entries that will be kept in content history file.
+content_history_size = "10"
+
+# Sets the "system" directory.
+# Implementations can query for this directory to load BIOSes, system-specific configs, etc.
+system_directory = "default"
+
+# Sets start directory for menu file browser.
+rgui_browser_directory = "default"
+
+# Content directory. Interacts with RETRO_ENVIRONMENT_GET_CONTENT_DIRECTORY.
+# Usually set by developers who bundle libretro/RetroArch apps to point to assets.
+# content_directory =
+
+# Assets directory. This location is queried by default when menu interfaces try to look for
+# loadable assets, etc.
+assets_directory = "/opt/RPI2JAMMA/retroarch/assets"
+
+# Dynamic wallpapers directory. The place to store the wallpapers dynamically
+# loaded by the menu depending on context.
+dynamic_wallpapers_directory = "default"
+
+# Thumbnails directory. To store thumbnail files.
+thumbnails_directory = "/opt/RPI2JAMMA/retroarch/thumbnails"
+
+# Sets start directory for menu config browser.
+rgui_config_directory = "/opt/RPI2JAMMA/retroarch/config"
+
+# Show startup screen in menu.
+# Is automatically set to false when seen for the first time.
+# This is only updated in config if config_save_on_exit is set to true, however.
+rgui_show_start_screen = "false"
+
+# Flushes config to disk on exit. Useful for menu as settings can be modified.
+# Overwrites the config. #include's and comments are not preserved.
+config_save_on_exit = "false"
+
+# Ask for confirmation on exit.
+confirm_on_exit = "false"
+
+# Load up a specific config file based on the core being used.
+# core_specific_config = false
+
+# Shows hidden files and folders in directory listings.
+# show_hidden_files = "true" ###
+show_hidden_files = "false"
+
+
+#### Video
+
+# Video driver to use. "gl", "xvideo", "sdl"
+video_driver = "gl"
+
+# Which context implementation to use.
+# Possible ones for desktop are: glx, x-egl, kms-egl, sdl-gl, wgl.
+# By default, tries to use first suitable driver.
+video_context_driver = ""
+
+# Windowed x resolution scale and y resolution scale
+# (Real x res: base_size * xscale * aspect_ratio, real y res: base_size * yscale)
+video_scale = "1.000000"
+
+# Start in fullscreen. Can be changed at runtime.
+video_fullscreen = "true"
+# video_fullscreen_x = "320"
+# video_fullscreen_y = "240"
+
+# If fullscreen, prefer using a windowed fullscreen mode.
+# video_windowed_fullscreen = "false"
+video_windowed_fullscreen = "false"
+
+# Which monitor to prefer. 0 (default) means no particular monitor is preferred, 1 and up (1 being first monitor),
+# suggests RetroArch to use that particular monitor.
+video_monitor_index = "0"
+
+# Forcibly disable composition. Only works in Windows Vista/7 for now.
+video_disable_composition = "false"
+
+# Video vsync.
+video_vsync = "true"
+
+# Max amount of swapchain images. 
+# Single buffering = 1, Double buffering = 2, 3 = Triple buffering
+video_max_swapchain_images = "3"
+
+# Forcibly disable sRGB FBO support. Some Intel OpenGL drivers on Windows
+# have video problems with sRGB FBO support enabled.
+video_force_srgb_disable = "false"
+
+# Attempts to hard-synchronize CPU and GPU. Can reduce latency at cost of performance.
+video_hard_sync = "true"
+
+# Sets how many frames CPU can run ahead of GPU when using video_hard_sync.
+# Maximum is 3.
+video_hard_sync_frames = "3"
+
+# Sets how many milliseconds to delay after VSync before running the core.
+# Can reduce latency at cost of higher risk of stuttering.
+# Maximum is 15.
+video_frame_delay = "0"
+
+# Inserts a black frame inbetween frames.
+# Useful for 120 Hz monitors who want to play 60 Hz material with eliminated ghosting.
+# video_refresh_rate should still be configured as if it is a 60 Hz monitor (divide refresh rate by 2).
+video_black_frame_insertion = "false"
+
+# Use threaded video driver. Using this might improve performance at possible cost of latency and more video stuttering.
+video_threaded = "false"
+
+# Use a shared context for HW rendered libretro cores.
+# Avoids having to assume HW state changes inbetween frames.
+video_shared_context = "false"
+
+# Smoothens picture with bilinear filtering. Should be disabled if using pixel shaders.
+video_smooth = "true"
+
+# Forces rendering area to stay equal to content aspect ratio or as defined in video_aspect_ratio.
+# video_force_aspect = "true"
+video_force_aspect = "true"
+
+# Only scales video in integer steps.
+# The base size depends on system-reported geometry and aspect ratio.
+# If video_force_aspect is not set, X/Y will be integer scaled independently.
+video_scale_integer = "false"
+
+# A floating point value for video aspect ratio (width / height).
+# If this is not set, aspect ratio is assumed to be automatic.
+# Behavior then is defined by video_aspect_ratio_auto.
+video_aspect_ratio =  1.333333
+
+# If this is true and video_aspect_ratio is not set,
+# aspect ratio is decided by libretro implementation.
+# If this is false, 1:1 PAR will always be assumed if video_aspect_ratio is not set.
+video_aspect_ratio_auto = "true"
+
+# Forces cropping of overscanned frames.
+# Exact behavior of this option is implementation specific.
+video_crop_overscan = "false"
+
+# Path to shader. Shader can be either Cg, CGP (Cg preset) or GLSL, GLSLP (GLSL preset)
+# video_shader = "/path/to/shader.{cg,cgp,glsl,glslp}"
+video_shader = "/opt/RPI2JAMMA/retroarch/shaders/rpi2nuc.glslp"
+#video_shader = ""
+
+# Load video_shader on startup.
+# Other shaders can still be loaded later in runtime.
+video_shader_enable = "false"
+
+# Defines a directory where shaders (Cg, CGP, GLSL) are kept for easy access.
+video_shader_dir = "/opt/RPI2JAMMA/retroarch/shaders"
+
+# CPU-based video filter. Path to a dynamic library.
+video_filter = ""
+
+# Defines a directory where CPU-based video filters are kept.
+video_filter_dir = "default"
+
+# Path to a font used for rendering messages. This path must be defined to enable fonts.
+# Do note that the _full_ path of the font is necessary!
+video_font_path = ""
+
+# Size of the font rendered.
+video_font_size = "16.000000"
+
+# Enable usage of OSD messages.
+video_font_enable = "false"
+# video_font_enable = "true" ###
+
+# Offset for where messages will be placed on screen. Values are in range 0.0 to 1.0 for both x and y values. 
+# [0.0, 0.0] maps to the lower left corner of the screen.
+video_message_pos_x = "0.050000"
+video_message_pos_y = "0.050000"
+
+# Color for message. The value is treated as a hexadecimal value.
+# It is a regular RGB hex number, i.e. red is "ff0000".
+video_message_color = "ffff00"
+
+# Video refresh rate of your monitor.
+# Used to calculate a suitable audio input rate.
+video_refresh_rate = "57.000000"
+
+# Allows libretro cores to set rotation modes.
+# Setting this to false will honor, but ignore this request.
+# This is useful for vertically oriented content where one manually rotates the monitor.
+video_allow_rotate = "true"
+
+# Forces a certain rotation of the screen.
+# The rotation is added to rotations which the libretro core sets (see video_allow_rotate).
+# The angle is <value> * 90 degrees counter-clockwise.
+video_rotation = "0"
+
+#### Audio
+
+# Enable audio.
+audio_enable = "true"
+
+# Mutes audio.
+audio_mute_enable = "false"
+
+# Audio output sample rate.
+audio_out_rate = "48000"
+
+# Audio resampler backend. Which audio resampler to use.
+# Default will use "sinc".
+# audio_resampler = "sinc"
+
+# Audio driver backend. Depending on configuration possible candidates are: alsa, pulse, oss, jack, rsound, roar, openal, sdl, xaudio.
+audio_driver = "alsathread"
+# audio_driver = "jack"
+
+# Override the default audio device the audio_driver uses. This is driver dependant. E.g. ALSA wants a PCM device, OSS wants a path (e.g. /dev/dsp), Jack wants portnames (e.g. system:playback1,system:playback_2), and so on ...
+audio_device = ""
+
+# Audio DSP plugin that processes audio before it's sent to the driver. Path to a dynamic library.
+audio_dsp_plugin = ""
+
+# Directory where DSP plugins are kept.
+audio_filter_dir = "default"
+
+# Will sync (block) on audio. Recommended.
+audio_sync = "true"
+
+# Desired audio latency in milliseconds. Might not be honored if driver can't provide given latency.
+# audio_latency = "64"
+
+# Enable audio rate control.
+audio_rate_control = "true"
+
+# Controls audio rate control delta. Defines how much input rate can be adjusted dynamically.
+# Input rate = in_rate * (1.0 +/- audio_rate_control_delta)
+audio_rate_control_delta = "0.005"
+
+# Controls maximum audio timing skew. Defines the maximum change in input rate.
+# Input rate = in_rate * (1.0 +/- max_timing_skew)
+audio_max_timing_skew = "0.05"
+
+# Audio volume. Volume is expressed in dB.
+# 0 dB is normal volume. No gain will be applied.
+# Gain can be controlled in runtime with input_volume_up/input_volume_down.
+audio_volume = "0.000000"
+
+#### Overlay
+
+# Defines a directory where overlays are kept for easy access.
+overlay_directory = "/opt/RPI2JAMMA/retroarch/overlay"
+
+# Enable or disable the current overlay.
+input_overlay_enable = "true"
+
+# Hide the current overlay from appearing inside the menu.
+input_overlay_hide_in_menu = "true"
+
+# Path to input overlay.
+input_overlay = ""
+
+# Overlay opacity.
+input_overlay_opacity = "0.700000"
+
+# Overlay scale.
+input_overlay_scale = "1.000000"
+
+#### OSK (Onscreen Keyboard) Overlay
+
+# Defines a directory where onscreen keyboard overlays are 
+# kept for easy access.
+osk_overlay_directory = "/opt/RPI2JAMMA/retroarch/overlay"
+
+# Enable onscreen keyboard overlay.
+input_osk_overlay_enable = "true"
+
+# Path to onscreen keyboard overlay.
+input_osk_overlay = ""
+
+# Onscreen keyboard overlay opacity.
+# input_osk_overlay_opacity = 1.0
+
+# Onscreen keyboard overlay scale
+# input_osk_overlay_scale = 1.0
+
+#### Input
+
+# Input driver. Depending on video driver, it might force a different input driver.
+# input_driver = "linuxraw"
+# par defaut il faut linuxraw sauf pour atari et amstrad
+# input_driver = "udev"
+
+# Input device driver. (Valid: linuxraw, sdl, dinput)
+input_joypad_driver = "linuxraw"
+#input_joypad_driver = "dinput"
+
+# Path to input remapping file.
+# input_remapping_path =
+
+# Input bind timer timeout.
+# Amount of seconds to wait until proceeding to the next bind. Default: 5, minimum: 1
+input_bind_timeout = "5"
+
+# If enabled, overrides the input binds with the remapped binds set for the current core.
+input_remap_binds_enable = "true"
+
+# Maximum amount of users supported by RetroArch.
+input_max_users = "4"
+
+# Keyboard layout for input driver if applicable (udev/evdev for now).
+# Syntax is either just layout (e.g. "no"), or a layout and variant separated with colon ("no:nodeadkeys").
+input_keyboard_layout = ""
+
+# Defines axis threshold. Possible values are [0.0, 1.0]
+# input_axis_threshold = 0.5
+
+# Enable input auto-detection. Will attempt to autoconfigure
+# joypads, Plug-and-Play style.
+# input_autodetect_enable = "true"
+input_autodetect_enable = "false"
+
+# Show the input descriptors set by the core instead of the
+# default ones.
+input_descriptor_label_show = "true"
+
+# Hide input descriptors that were not set by the core.
+input_descriptor_hide_unbound = "false"
+
+# Influence how input polling is done inside RetroArch.
+# 0 : Early  - Input polling is performed before call to retro_run.
+# 1 : Normal - Input polling is performed when retro_input_poll is
+#     requested.
+# 2 : Late   - Input polling is performed on first call to retro_input_state
+#     per frame
+# 
+# Setting it to 0 or 2 can result in less latency depending on
+# your configuration. 
+#
+# When netplay is enabled, the default polling behavior (1) will
+# be used regardless of the value set here.
+input_poll_type_behavior = "2"
+
+# Directory for joypad autoconfigs.
+# If a joypad is plugged in, that joypad will be autoconfigured if a config file
+# corresponding to that joypad is present in joypad_autoconfig_dir.
+# Input binds which are made explicit (input_playerN_*_btn/axis) will take priority over autoconfigs.
+# Autoconfigs can be created with retroarch-joyconfig, manually, or with a frontend.
+# Requires input_autodetect_enable to be enabled.
+joypad_autoconfig_dir = "/opt/RPI2JAMMA/retroarch/autoconfig"
+
+
+# Menu buttons.
+# menu_ok_btn = "6"
+# menu_cancel_btn = "7"
+# menu_search_btn = "9"
+# menu_info_btn = "2"
+# menu_default_btn = "3"
+# menu_scroll_down_btn = "11"
+# menu_scroll_up_btn = "8"
+
+# Describes the period and how long of that period a turbo-enabled button should behave.
+# Numbers are described in frames.
+input_turbo_period = "6"
+# input_turbo_duty_cycle = 3
+
+# This goes all the way to user 8 (*_player2_*, *_player3_*, etc), but omitted for clarity.
+# All input binds have corresponding binds for keyboard (none), joykeys (_btn) and joyaxes (_axis) as well.
+
+# Toggles fullscreen.
+input_toggle_fullscreen = "nul"
+input_toggle_fullscreen_btn = "nul"
+input_toggle_fullscreen_axis = "nul"
+
+# Saves state.
+input_save_state = "nul"
+input_save_state_btn = "nul"
+input_save_state_axis = "nul"
+# Loads state.
+input_load_state = "nul"
+input_load_state_btn = "nul"
+input_load_state_axis = "nul"
+
+# State slots. With slot set to 0, save state name is *.state (or whatever defined on commandline).
+# When slot is != 0, path will be $path%d, where %d is slot number.
+input_state_slot_increase = "nul"
+input_state_slot_increase_btn = "nul"
+input_state_slot_increase_axis = "nul"
+input_state_slot_decrease = "nul"
+input_state_slot_decrease_btn = "nul"
+input_state_slot_decrease_axis = "nul"
+
+# Toggles between fast-forwarding and normal speed.
+input_toggle_fast_forward = "nul"
+input_toggle_fast_forward_btn = "nul"
+input_toggle_fast_forward_axis = "nul"
+
+# Hold for fast-forward. Releasing button disables fast-forward.
+input_hold_fast_forward = "nul"
+input_hold_fast_forward_btn = "nul"
+input_hold_fast_forward_axis = "nul"
+
+
+# Key to exit RetroArch cleanly. 
+# Killing it in any hard way (SIGKILL, etc) will terminate RetroArch without saving RAM, etc.
+# On Unix-likes, SIGINT/SIGTERM allows a clean deinitialization.
+input_exit_emulator = "escape"
+input_exit_emulator_btn = "nul"
+input_exit_emulator_axis = "nul"
+
+# Applies next and previous shader in directory.
+input_shader_next = "nul"
+input_shader_next_btn = "nul"
+input_shader_next_axis = "nul"
+input_shader_prev = "nul"
+input_shader_prev_btn = "nul"
+input_shader_prev_axis = "nul"
+
+# Hold button down to rewind. Rewinding must be enabled.
+input_rewind = "nul"
+input_rewind_btn = "nul"
+input_rewind_axis = "nul"
+
+# Toggle between recording and not.
+input_movie_record_toggle = "nul"
+input_movie_record_toggle_btn = "nul"
+input_movie_record_toggle_axis = "nul"
+
+
+# Toggle between paused and non-paused state
+input_pause_toggle = "p"
+input_pause_toggle_btn = "nul"
+input_pause_toggle_axis = "nul"
+
+# Frame advance when content is paused
+input_frame_advance = "nul"
+input_frame_advance_btn = "nul"
+input_frame_advance_axis = "nul"
+
+# Reset the content.
+input_reset = "nul"
+input_reset_btn = "nul"
+input_reset_axis = "nul"
+
+# Cheats.
+input_cheat_index_plus = "nul"
+input_cheat_index_plus_btn = "nul"
+input_cheat_index_plus_axis = "nul"
+input_cheat_index_minus = "nul"
+input_cheat_index_minus_btn = "nul"
+input_cheat_index_minus_axis = "nul"
+input_cheat_toggle = "nul"
+input_cheat_toggle_btn = "nul"
+input_cheat_toggle_axis = "nul"
+
+# Mute/unmute audio
+input_audio_mute = "nul"
+input_audio_mute_btn = "nul"
+input_audio_mute_axis = "nul"
+
+# Take screenshot
+input_screenshot = "nul"
+input_screenshot_btn = "nul"
+input_screenshot_axis = "nul"
+
+# Netplay flip users.
+input_netplay_flip_players = "nul"
+input_netplay_flip_players_btn = "nul"
+input_netplay_flip_players_axis = "nul"
+
+
+# Hold for slowmotion.
+input_slowmotion = "nul"
+input_slowmotion_btn = "nul"
+input_slowmotion_axis = "nul"
+
+# Enable other hotkeys.
+# If this hotkey is bound to either keyboard, joybutton or joyaxis,
+# all other hotkeys will be disabled unless this hotkey is also held at the same time.
+# This is useful for RETRO_KEYBOARD centric implementations
+# which query a large area of the keyboard, where it is not desirable
+# that hotkeys get in the way.
+
+# Alternatively, all hotkeys for keyboard could be disabled by the user.
+input_enable_hotkey = "nul"
+input_enable_hotkey_btn = "nul"
+input_enable_hotkey_axis = "nul"
+
+
+# Increases audio volume.
+input_volume_up = kp_plus
+input_volume_up_btn = "nul"
+input_volume_up_axis = "nul"
+
+# Decreases audio volume.
+input_volume_down = kp_minus
+input_volume_down_btn = "nul"
+input_volume_down_axis = "nul"
+
+
+# Toggles to next overlay. Wraps around.
+input_overlay_next = "nul"
+input_overlay_next_btn = "nul"
+input_overlay_next_axis = "nul"
+
+
+# Toggles eject for disks. Used for multiple-disk content.
+input_disk_eject_toggle = "nul"
+input_disk_eject_toggle_btn = "nul"
+input_disk_eject_toggle_axis = "nul"
+
+# Cycles through disk images. Use after ejecting.
+# Complete by toggling eject again.
+# input_disk_prev = "nul"
+# input_disk_prev_btn = "nul"
+# input_disk_prev_axis = "nul"
+# input_disk_next = "nul"
+# input_disk_next_btn = "nul"
+# input_disk_next_axis = "nul"
+
+# Toggles menu retroarch.
+input_menu_toggle = "nul"
+input_menu_toggle_btn = "nul"
+input_menu_toggle_axis = "nul"
+
+
+# RetroPad button combination to toggle menu
+# 0 = none, 1 = L + R + Y + D-Pad Down, 2 = L3 + R3, 3 = Start + Select
+input_menu_toggle_gamepad_combo = "0"
+
+# allow any RetroPad to control the menu
+all_users_control_menu = "true"
+
+# Toggles mouse grab. When mouse is grabbed, RetroArch hides the mouse,
+# and keeps the mouse pointer inside the window to allow relative mouse input
+# to work better.
+input_grab_mouse_toggle = "nul"
+input_grab_mouse_toggle_btn = "nul"
+input_grab_mouse_toggle_axis = "nul"
+
+
+#### Menu
+
+# Menu driver to use. "rgui", "lakka", etc. 
+menu_driver = "rgui"
+
+# If disabled, the libretro core will keep running in the background when we
+# are in the menu.
+menu_pause_libretro = "true"
+
+# Enable mouse input inside the menu.
+menu_mouse_enable = "false"
+
+# Enable touch input inside the menu.
+menu_pointer_enable = "false"
+
+# Shows current date and/or time inside menu.
+#menu_timedate_enable = "true"
+menu_timedate_enable = "false"
+
+# Shows current core inside menu.
+menu_core_enable = "true"
+
+# Path to an image to set as menu wallpaper.
+menu_wallpaper = ""
+menu_wallpaper_opacity = "0.300000"
+menu_footer_opacity = "1.000000"
+menu_header_opacity = "1.000000"
+
+# Dynamically load a new wallpaper depending on context.
+menu_dynamic_wallpaper_enable = "false"
+
+# Type of thumbnail to display. 0 = none, 1 = snaps, 2 = titles, 3 = boxarts
+menu_thumbnails = "0"
+
+# Wrap-around to beginning and/or end if boundary of list is reached horizontally or vertically
+menu_navigation_wraparound_enable = "true"
+
+# Filter files being show in 'Load Content' by supported extensions
+menu_navigation_browser_filter_supported_extensions_enable = "true"
+
+# Collapse subgroup settings into main group to create one big listing of settings
+# per category.
+# menu_collapse_subgroups_enable = false
+
+#### UI
+
+# Suspends the screensaver if set to true. Is a hint that does not necessarily have to be honored
+# by video driver.
+suspend_screensaver_enable = "true"
+
+# Start UI companion driver's interface on boot (if available).
+ui_companion_start_on_boot = "true"
+
+#### Camera
+
+# Override the default camera device the camera driver uses. This is driver dependant.
+camera_device = ""
+camera_driver = "null"
+
+# Override the default privacy permission for cores that want to access camera services. Is "false" by default.
+camera_allow = "false"
+
+#### Location
+
+# Override the default privacy permission for cores that want to access location services. Is "false" by default.
+location_allow = "false"
+
+#### Core Updater
+
+# URL to core update directory on buildbot.
+core_updater_buildbot_url = ""
+
+# URL to assets update directory on buildbot.
+core_updater_buildbot_assets_url = "http://buildbot.libretro.com/assets/"
+
+# After downloading, automatically extract archives that the downloads are contained inside.
+core_updater_auto_extract_archive = "true"
+
+#### Network
+
+# When being client over netplay, use keybinds for user 1.
+# netplay_client_swap_input = "true"
+
+# The username of the person running RetroArch. This will be used for playing online, for instance.
+netplay_nickname = ""
+
+# The amount of delay frames to use for netplay. Increasing this value will increase
+# performance, but introduce more latency.
+netplay_delay_frames = "0"
+
+# Netplay mode for the current user.
+# false is Server, true is Client.
+netplay_mode = "false"
+
+# Enable or disable spectator mode for the user during netplay.
+netplay_spectator_mode_enable = "false"
+
+# The IP Address of the host to connect to.
+netplay_ip_address = ""
+
+# The port of the host IP Address. Can be either a TCP or UDP port.
+netplay_ip_port = "0"
+
+#### Misc
+
+# Enable rewinding. This will take a performance hit when playing, so it is disabled by default.
+rewind_enable = "false"
+
+# Rewinding buffer size in megabytes. Bigger rewinding buffer means you can rewind longer.
+# The buffer should be approx. 20MB per minute of buffer time.
+# rewind_buffer_size = 20
+
+# Rewind granularity. When rewinding defined number of frames, you can rewind several frames at a time, increasing the rewinding speed.
+rewind_granularity = "1"
+
+# Pause gameplay when window focus is lost.
+pause_nonactive = "true"
+
+# Autosaves the non-volatile SRAM at a regular interval. This is disabled by default unless set otherwise.
+# The interval is measured in seconds. A value of 0 disables autosave.
+autosave_interval = "0"
+
+# Path to content database directory.
+content_database_path = "/opt/RPI2JAMMA/retroarch/database/rdb"
+
+# Path to cheat database directory.
+cheat_database_path = "/opt/RPI2JAMMA/retroarch/cheats"
+
+# Directory to dump screenshots to.
+screenshot_directory = "/opt/RPI2JAMMA/retroarch/screenshots"
+
+# Records video after CPU video filter.
+video_post_filter_record = "false"
+
+# Records output of GPU shaded material if available.
+video_gpu_record = "false"
+
+# Screenshots output of GPU shaded material if available.
+video_gpu_screenshot = "true"
+
+# Block SRAM from being overwritten when loading save states.
+# Might potentially lead to buggy games.
+block_sram_overwrite = "false"
+
+# When saving a savestate, save state index is automatically increased before
+# it is saved.
+# Also, when loading content, the index will be set to the highest existing index.
+# There is no upper bound on the index.
+savestate_auto_index = "false"
+
+# Slowmotion ratio. When slowmotion, content will slow down by factor.
+slowmotion_ratio = "3.000000"
+
+# The maximum rate at which content will be run when using fast forward. (E.g. 5.0 for 60 fps content => 300 fps cap).
+# RetroArch will go to sleep to ensure that the maximum rate will not be exceeded.
+# Do not rely on this cap to be perfectly accurate.
+# If this is set at 0, then fastforward ratio is unlimited (no FPS cap)
+fastforward_ratio = "0.000000"
+
+# Enable stdin/network command interface.
+network_cmd_enable = "false"
+network_cmd_port = "55355"
+stdin_cmd_enable = "false"
+network_remote_enable = "false"
+
+#### Bundle extraction
+
+
+##########################################################################
+###########################     OLD CONFIG     ###########################
+##########################################################################
+
+#cursor_directory = "/opt/RPI2JAMMA/retroarch/database/cursors"
+core_assets_directory = "/opt/RPI2JAMMA/retroarch/downloads"
+record_driver = "null"
+recording_output_directory = ""
+recording_config_directory = ""
+location_driver = "null"
+audio_block_frames = "0"
+#network_remote_base_port = "55400"
+dpi_override_value = "200"
+wifi_driver = "null"
+custom_viewport_x = "0"
+custom_viewport_width = "320"
+custom_viewport_y = "0"
+custom_viewport_height = "240"
+video_swap_interval = "1"
+aspect_ratio_index = "20"
+state_slot = "0"
+fps_show = "false"
+user_language = "0"
+input_duty_cycle = "3"
+keyboard_gamepad_mapping_type = "1"
+xmb_scale_factor = "100"
+xmb_alpha_factor = "75"
+xmb_theme = "0"
+xmb_menu_color_theme = "4"
+materialui_menu_color_theme = "0"
+menu_shader_pipeline = "1"
+bundle_assets_extract_version_current = "0"
+bundle_assets_extract_last_version = "0"
+ui_companion_enable = "false"
+back_as_menu_toggle_enable = "true"
+load_dummy_on_core_shutdown = "true"
+builtin_mediaplayer_enable = "false"
+builtin_imageviewer_enable = "false" ###
+ui_menubar_enable = "true"
+custom_bgm_enable = "false"
+auto_screenshot_filename = "true"
+bundle_assets_extract_enable = "false"
+keyboard_gamepad_enable = "true"
+core_set_supports_no_game_enable = "true"
+threaded_data_runloop_enable = "true"
+menu_throttle_framerate = "false"
+menu_linear_filter = "false"
+# dpi_override_enable = "false"
+dpi_override_enable = "true"
+xmb_shadows_enable = "true"
+xmb_show_settings = "true"
+xmb_show_images = "true"
+xmb_show_history = "true"
+xmb_font = ""
+playlist_names = ""
+playlist_cores = ""
+menu_show_advanced_settings = "false"
+cheevos_enable = "false"
+cheevos_test_unofficial = "false"
+cheevos_hardcore_mode_enable = "false"
+cheevos_username = ""
+cheevos_password = ""
+input_overlay_enable_autopreferred = "true"
+
+game_specific_options = "false"
+auto_overrides_enable = "true"
+
+#A verifier si aucun impact
+auto_remaps_enable = "false"
+
+auto_shaders_enable = "false"
+sort_savefiles_enable = "false"
+sort_savestates_enable = "false"
+ups_pref = "false"
+bps_pref = "false"
+ips_pref = "false"
+menu_entry_normal_color = "ffffffff"
+menu_entry_hover_color = "ff64ff64"
+menu_title_color = "ff64ff64"
+gamma_correction = "false"
+flicker_filter_enable = "false"
+soft_filter_enable = "false"
+soft_filter_index = "0"
+current_resolution_id = "0"
+flicker_filter_index = "0"
+
+input_osk_toggle = "nul"
+input_osk_toggle_btn = "nul"
+input_osk_toggle_axis = "nul"
+
+resampler_directory = ""
+bundle_assets_src_path = ""
+bundle_assets_dst_path = ""
+bundle_assets_dst_path_subdir = ""
+
+system_directory = "/opt/RPI2JAMMA/amiberry"
+
+input_driver = "linuxraw"
+
+########################
+##### Controller 1 #####
+########################
+input_device_p1 = "0"
+
+# If desired, it is possible to override which joypads are being used for user 1 through 8.
+# First joypad available is 0.
+input_player1_joypad_index = "0"
+
+# Sets which libretro device is used for a user.
+# Devices are indentified with a number.
+# This is normally saved by the menu.
+# Device IDs are found in libretro.h.
+# These settings are overridden by explicit command-line arguments which refer to input devices.
+# None: 0
+# Joypad (RetroPad): 1
+# Mouse: 2
+# Keyboard: 3
+# Generic Lightgun: 4
+# Joypad w/ Analog (RetroPad + Analog sticks): 5
+# Multitap (SNES specific): 257
+# Super Scope (SNES specific): 260
+# Justifier (SNES specific): 516
+# Justifiers (SNES specific): 772
+input_libretro_device_p1 = "1"
+
+# input_player1_analog_dpad_mode = "0"
+
+# Keyboard input, Joypad and Joyaxis will all obey the "nul" bind, which disables the bind completely, 
+# rather than relying on a default.
+
+# Input device buttons. (end with _btn)
+# Figure these out by using RetroArch-Phoenix or retroarch-joyconfig.
+# You can use joypad hats with hnxx, where n is the hat, and xx is a string representing direction. 
+# E.g. "h0up"
+input_player1_a = "nul"
+input_player1_a_btn = "1"
+input_player1_a_axis = "nul"
+input_player1_b = "nul"
+input_player1_b_btn = "0"
+input_player1_b_axis = "nul"
+input_player1_x = "nul"
+input_player1_x_btn = "nul"
+input_player1_x_axis = "nul"
+input_player1_y = "nul"
+input_player1_y_btn = "nul"
+input_player1_y_axis = "nul"
+input_player1_start = "nul"
+input_player1_start_btn = "9"
+input_player1_start_axis = "nul"
+input_player1_select = "nul"
+input_player1_select_btn = "8"
+input_player1_select_axis = "nul"
+input_player1_l = "nul"
+input_player1_l_btn = "nul"
+input_player1_l_axis = "nul"
+input_player1_r = "nul"
+input_player1_r_btn = "nul"
+input_player1_r_axis = "nul"
+input_player1_left = "nul"
+input_player1_left_btn = "nul"
+input_player1_left_axis = "-0"
+input_player1_right = "nul"
+input_player1_right_btn = "nul"
+input_player1_right_axis = "+0"
+input_player1_up = "nul"
+input_player1_up_btn = "nul"
+input_player1_up_axis = "-1"
+input_player1_down = "nul"
+input_player1_down_btn = "nul"
+input_player1_down_axis = "+1"
+input_player1_l2 = "nul"
+input_player1_l2_btn = "nul"
+input_player1_l2_axis = "nul"
+input_player1_r2 = "nul"
+input_player1_r2_btn = "nul"
+input_player1_r2_axis = "nul"
+input_player1_l3 = "nul"
+input_player1_l3_btn = "nul"
+input_player1_l3_axis = "nul"
+input_player1_r3 = "nul"
+input_player1_r3_btn = "nul"
+input_player1_r3_axis = "nul"
+
+# Two analog sticks (DualShock-esque).
+# Bound as usual, however, if a real analog axis is bound,
+# it can be read as a true analog.
+# Positive X axis is right, Positive Y axis is down.
+input_player1_l_x_plus = "nul"
+input_player1_l_x_plus_btn = "nul"
+input_player1_l_x_plus_axis = "nul"
+input_player1_l_x_minus = "nul"
+input_player1_l_x_minus_btn = "nul"
+input_player1_l_x_minus_axis = "nul"
+input_player1_l_y_plus = "nul"
+input_player1_l_y_plus_btn = "nul"
+input_player1_l_y_plus_axis = "nul"
+input_player1_l_y_minus = "nul"
+input_player1_l_y_minus_btn = "nul"
+input_player1_l_y_minus_axis = "nul"
+input_player1_r_x_plus = "nul"
+input_player1_r_x_plus_btn = "nul"
+input_player1_r_x_plus_axis = "nul"
+input_player1_r_x_minus = "nul"
+input_player1_r_x_minus_btn = "nul"
+input_player1_r_x_minus_axis = "nul"
+input_player1_r_y_plus = "nul"
+input_player1_r_y_plus_btn = "nul"
+input_player1_r_y_plus_axis = "nul"
+input_player1_r_y_minus = "nul"
+input_player1_r_y_minus_btn = "nul"
+input_player1_r_y_minus_axis = "nul"
+
+# Holding the turbo while pressing another button will let the button enter a turbo mode
+# where the button state is modulated with a periodic signal.
+# The modulation stops when the button itself (not turbo button) is released.
+input_player1_turbo = "nul"
+input_player1_turbo_btn = "nul"
+input_player1_turbo_axis = "nul"
+
+
+########################
+##### Controller 2 #####
+########################
+input_device_p2 = "1"
+
+# If desired, it is possible to override which joypads are being used for user 1 through 8.
+# First joypad available is 0.
+input_player2_joypad_index = "1"
+
+# Sets which libretro device is used for a user.
+# Devices are indentified with a number.
+# This is normally saved by the menu.
+# Device IDs are found in libretro.h.
+# These settings are overridden by explicit command-line arguments which refer to input devices.
+# None: 0
+# Joypad (RetroPad): 1
+# Mouse: 2
+# Keyboard: 3
+# Generic Lightgun: 4
+# Joypad w/ Analog (RetroPad + Analog sticks): 5
+# Multitap (SNES specific): 257
+# Super Scope (SNES specific): 260
+# Justifier (SNES specific): 516
+# Justifiers (SNES specific): 772
+input_libretro_device_p2 = "1"
+
+# input_player2_analog_dpad_mode = "1"
+
+# Keyboard input, Joypad and Joyaxis will all obey the "nul" bind, which disables the bind completely, 
+# rather than relying on a default.
+
+# Input device buttons. (end with _btn)
+# Figure these out by using RetroArch-Phoenix or retroarch-joyconfig.
+# You can use joypad hats with hnxx, where n is the hat, and xx is a string representing direction. 
+# E.g. "h0up"
+input_player2_a = "nul"
+input_player2_a_btn = "1"
+input_player2_a_axis = "nul"
+input_player2_b = "nul"
+input_player2_b_btn = "0"
+input_player2_b_axis = "nul"
+input_player2_x = "nul"
+input_player2_x_btn = "nul"
+input_player2_x_axis = "nul"
+input_player2_y = "nul"
+input_player2_y_btn = "nul"
+input_player2_y_axis = "nul"
+input_player2_start = "nul"
+input_player2_start_btn = "9"
+input_player2_start_axis = "nul"
+input_player2_select = "nul"
+input_player2_select_btn = "8"
+input_player2_select_axis = "nul"
+input_player2_l = "nul"
+input_player2_l_btn = "nul"
+input_player2_l_axis = "nul"
+input_player2_r = "nul"
+input_player2_r_btn = "nul"
+input_player2_r_axis = "nul"
+input_player2_left = "nul"
+input_player2_left_btn = "nul"
+input_player2_left_axis = "-0"
+input_player2_right = "nul"
+input_player2_right_btn = "nul"
+input_player2_right_axis = "+0"
+input_player2_up = "nul"
+input_player2_up_btn = "nul"
+input_player2_up_axis = "-1"
+input_player2_down = "nul"
+input_player2_down_btn = "nul"
+input_player2_down_axis = "+1"
+input_player2_l2 = "nul"
+input_player2_l2_btn = "nul"
+input_player2_l2_axis = "nul"
+input_player2_r2 = "nul"
+input_player2_r2_btn = "nul"
+input_player2_r2_axis = "nul"
+input_player2_l3 = "nul"
+input_player2_l3_btn = "nul"
+input_player2_l3_axis = "nul"
+input_player2_r3 = "nul"
+input_player2_r3_btn = "nul"
+input_player2_r3_axis = "nul"
+
+# Two analog sticks (DualShock-esque).
+# Bound as usual, however, if a real analog axis is bound,
+# it can be read as a true analog.
+# Positive X axis is right, Positive Y axis is down.
+input_player2_l_x_plus = "nul"
+input_player2_l_x_plus_btn = "nul"
+input_player2_l_x_plus_axis = "nul"
+input_player2_l_x_minus = "nul"
+input_player2_l_x_minus_btn = "nul"
+input_player2_l_x_minus_axis = "nul"
+input_player2_l_y_plus = "nul"
+input_player2_l_y_plus_btn = "nul"
+input_player2_l_y_plus_axis = "nul"
+input_player2_l_y_minus = "nul"
+input_player2_l_y_minus_btn = "nul"
+input_player2_l_y_minus_axis = "nul"
+input_player2_r_x_plus = "nul"
+input_player2_r_x_plus_btn = "nul"
+input_player2_r_x_plus_axis = "nul"
+input_player2_r_x_minus = "nul"
+input_player2_r_x_minus_btn = "nul"
+input_player2_r_x_minus_axis = "nul"
+input_player2_r_y_plus = "nul"
+input_player2_r_y_plus_btn = "nul"
+input_player2_r_y_plus_axis = "nul"
+input_player2_r_y_minus = "nul"
+input_player2_r_y_minus_btn = "nul"
+input_player2_r_y_minus_axis = "nul"
+
+# Holding the turbo while pressing another button will let the button enter a turbo mode
+# where the button state is modulated with a periodic signal.
+# The modulation stops when the button itself (not turbo button) is released.
+input_player2_turbo = "nul"
+input_player2_turbo_btn = "nul"
+input_player2_turbo_axis = "nul"
+
+
+########################
+##### Controller 3 #####
+########################
+input_device_p3 = "2"
+
+# If desired, it is possible to override which joypads are being used for user 1 through 8.
+# First joypad available is 0.
+input_player3_joypad_index = "2"
+
+# Sets which libretro device is used for a user.
+# Devices are indentified with a number.
+# This is normally saved by the menu.
+# Device IDs are found in libretro.h.
+# These settings are overridden by explicit command-line arguments which refer to input devices.
+# None: 0
+# Joypad (RetroPad): 1
+# Mouse: 2
+# Keyboard: 3
+# Generic Lightgun: 4
+# Joypad w/ Analog (RetroPad + Analog sticks): 5
+# Multitap (SNES specific): 257
+# Super Scope (SNES specific): 260
+# Justifier (SNES specific): 516
+# Justifiers (SNES specific): 772
+input_libretro_device_p3 = "1"
+
+# input_player3_analog_dpad_mode = "2"
+
+# Keyboard input, Joypad and Joyaxis will all obey the "nul" bind, which disables the bind completely, 
+# rather than relying on a default.
+
+# Input device buttons. (end with _btn)
+# Figure these out by using RetroArch-Phoenix or retroarch-joyconfig.
+# You can use joypad hats with hnxx, where n is the hat, and xx is a string representing direction. 
+# E.g. "h0up"
+input_player3_a = "nul"
+input_player3_a_btn = "1"
+input_player3_a_axis = "nul"
+input_player3_b = "nul"
+input_player3_b_btn = "0"
+input_player3_b_axis = "nul"
+input_player3_x = "nul"
+input_player3_x_btn = "nul"
+input_player3_x_axis = "nul"
+input_player3_y = "nul"
+input_player3_y_btn = "nul"
+input_player3_y_axis = "nul"
+input_player3_start = "nul"
+input_player3_start_btn = "9"
+input_player3_start_axis = "nul"
+input_player3_select = "nul"
+input_player3_select_btn = "8"
+input_player3_select_axis = "nul"
+input_player3_l = "nul"
+input_player3_l_btn = "nul"
+input_player3_l_axis = "nul"
+input_player3_r = "nul"
+input_player3_r_btn = "nul"
+input_player3_r_axis = "nul"
+input_player3_left = "nul"
+input_player3_left_btn = "nul"
+input_player3_left_axis = "-0"
+input_player3_right = "nul"
+input_player3_right_btn = "nul"
+input_player3_right_axis = "+0"
+input_player3_up = "nul"
+input_player3_up_btn = "nul"
+input_player3_up_axis = "-1"
+input_player3_down = "nul"
+input_player3_down_btn = "nul"
+input_player3_down_axis = "+1"
+input_player3_l2 = "nul"
+input_player3_l2_btn = "nul"
+input_player3_l2_axis = "nul"
+input_player3_r2 = "nul"
+input_player3_r2_btn = "nul"
+input_player3_r2_axis = "nul"
+input_player3_l3 = "nul"
+input_player3_l3_btn = "nul"
+input_player3_l3_axis = "nul"
+input_player3_r3 = "nul"
+input_player3_r3_btn = "nul"
+input_player3_r3_axis = "nul"
+
+# Two analog sticks (DualShock-esque).
+# Bound as usual, however, if a real analog axis is bound,
+# it can be read as a true analog.
+# Positive X axis is right, Positive Y axis is down.
+input_player3_l_x_plus = "nul"
+input_player3_l_x_plus_btn = "nul"
+input_player3_l_x_plus_axis = "nul"
+input_player3_l_x_minus = "nul"
+input_player3_l_x_minus_btn = "nul"
+input_player3_l_x_minus_axis = "nul"
+input_player3_l_y_plus = "nul"
+input_player3_l_y_plus_btn = "nul"
+input_player3_l_y_plus_axis = "nul"
+input_player3_l_y_minus = "nul"
+input_player3_l_y_minus_btn = "nul"
+input_player3_l_y_minus_axis = "nul"
+input_player3_r_x_plus = "nul"
+input_player3_r_x_plus_btn = "nul"
+input_player3_r_x_plus_axis = "nul"
+input_player3_r_x_minus = "nul"
+input_player3_r_x_minus_btn = "nul"
+input_player3_r_x_minus_axis = "nul"
+input_player3_r_y_plus = "nul"
+input_player3_r_y_plus_btn = "nul"
+input_player3_r_y_plus_axis = "nul"
+input_player3_r_y_minus = "nul"
+input_player3_r_y_minus_btn = "nul"
+input_player3_r_y_minus_axis = "nul"
+
+# Holding the turbo while pressing another button will let the button enter a turbo mode
+# where the button state is modulated with a periodic signal.
+# The modulation stops when the button itself (not turbo button) is released.
+input_player3_turbo = "nul"
+input_player3_turbo_btn = "nul"
+input_player3_turbo_axis = "nul"
+
+
+
+########################
+##### Controller 4 #####
+########################
+input_device_p4 = "3"
+
+# If desired, it is possible to override which joypads are being used for user 1 through 8.
+# First joypad available is 0.
+input_player4_joypad_index = "3"
+
+# Sets which libretro device is used for a user.
+# Devices are indentified with a number.
+# This is normally saved by the menu.
+# Device IDs are found in libretro.h.
+# These settings are overridden by explicit command-line arguments which refer to input devices.
+# None: 0
+# Joypad (RetroPad): 1
+# Mouse: 2
+# Keyboard: 3
+# Generic Lightgun: 4
+# Joypad w/ Analog (RetroPad + Analog sticks): 5
+# Multitap (SNES specific): 257
+# Super Scope (SNES specific): 260
+# Justifier (SNES specific): 516
+# Justifiers (SNES specific): 772
+input_libretro_device_p4 = "1"
+
+# input_player4_analog_dpad_mode = "3"
+
+# Keyboard input, Joypad and Joyaxis will all obey the "nul" bind, which disables the bind completely, 
+# rather than relying on a default.
+
+# Input device buttons. (end with _btn)
+# Figure these out by using RetroArch-Phoenix or retroarch-joyconfig.
+# You can use joypad hats with hnxx, where n is the hat, and xx is a string representing direction. 
+# E.g. "h0up"
+input_player4_a = "nul"
+input_player4_a_btn = "1"
+input_player4_a_axis = "nul"
+input_player4_b = "nul"
+input_player4_b_btn = "0"
+input_player4_b_axis = "nul"
+input_player4_x = "nul"
+input_player4_x_btn = "nul"
+input_player4_x_axis = "nul"
+input_player4_y = "nul"
+input_player4_y_btn = "nul"
+input_player4_y_axis = "nul"
+input_player4_start = "nul"
+input_player4_start_btn = "9"
+input_player4_start_axis = "nul"
+input_player4_select = "nul"
+input_player4_select_btn = "8"
+input_player4_select_axis = "nul"
+input_player4_l = "nul"
+input_player4_l_btn = "nul"
+input_player4_l_axis = "nul"
+input_player4_r = "nul"
+input_player4_r_btn = "nul"
+input_player4_r_axis = "nul"
+input_player4_left = "nul"
+input_player4_left_btn = "nul"
+input_player4_left_axis = "-0"
+input_player4_right = "nul"
+input_player4_right_btn = "nul"
+input_player4_right_axis = "+0"
+input_player4_up = "nul"
+input_player4_up_btn = "nul"
+input_player4_up_axis = "-1"
+input_player4_down = "nul"
+input_player4_down_btn = "nul"
+input_player4_down_axis = "+1"
+input_player4_l2 = "nul"
+input_player4_l2_btn = "nul"
+input_player4_l2_axis = "nul"
+input_player4_r2 = "nul"
+input_player4_r2_btn = "nul"
+input_player4_r2_axis = "nul"
+input_player4_l3 = "nul"
+input_player4_l3_btn = "nul"
+input_player4_l3_axis = "nul"
+input_player4_r3 = "nul"
+input_player4_r3_btn = "nul"
+input_player4_r3_axis = "nul"
+
+# Two analog sticks (DualShock-esque).
+# Bound as usual, however, if a real analog axis is bound,
+# it can be read as a true analog.
+# Positive X axis is right, Positive Y axis is down.
+input_player4_l_x_plus = "nul"
+input_player4_l_x_plus_btn = "nul"
+input_player4_l_x_plus_axis = "nul"
+input_player4_l_x_minus = "nul"
+input_player4_l_x_minus_btn = "nul"
+input_player4_l_x_minus_axis = "nul"
+input_player4_l_y_plus = "nul"
+input_player4_l_y_plus_btn = "nul"
+input_player4_l_y_plus_axis = "nul"
+input_player4_l_y_minus = "nul"
+input_player4_l_y_minus_btn = "nul"
+input_player4_l_y_minus_axis = "nul"
+input_player4_r_x_plus = "nul"
+input_player4_r_x_plus_btn = "nul"
+input_player4_r_x_plus_axis = "nul"
+input_player4_r_x_minus = "nul"
+input_player4_r_x_minus_btn = "nul"
+input_player4_r_x_minus_axis = "nul"
+input_player4_r_y_plus = "nul"
+input_player4_r_y_plus_btn = "nul"
+input_player4_r_y_plus_axis = "nul"
+input_player4_r_y_minus = "nul"
+input_player4_r_y_minus_btn = "nul"
+input_player4_r_y_minus_axis = "nul"
+
+# Holding the turbo while pressing another button will let the button enter a turbo mode
+# where the button state is modulated with a periodic signal.
+# The modulation stops when the button itself (not turbo button) is released.
+input_player4_turbo = "nul"
+input_player4_turbo_btn = "nul"
+input_player4_turbo_axis = "nul"

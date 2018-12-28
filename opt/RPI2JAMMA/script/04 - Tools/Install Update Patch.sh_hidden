@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+######################
+## RPI2XXXXX aje_fr ##
+######################
+sudo tar xvfz /media/usb/Patch_RPI2XXXXX -C /
+sudo reboot

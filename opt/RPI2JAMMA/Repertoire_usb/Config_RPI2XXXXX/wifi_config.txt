@@ -1,0 +1,3 @@
+country=FR
+ssid="ESSID"
+psk="Your_wifi_password"

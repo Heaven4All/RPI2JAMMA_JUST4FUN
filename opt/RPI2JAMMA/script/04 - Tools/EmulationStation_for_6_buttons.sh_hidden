@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+######################
+## RPI2XXXXX aje_fr ##
+######################
+sudo rm -f /home/pi/.emulationstation/es_input.cfg
+ln -s /home/pi/.emulationstation/es_input.cfg_6btn /home/pi/.emulationstation/es_input.cfg

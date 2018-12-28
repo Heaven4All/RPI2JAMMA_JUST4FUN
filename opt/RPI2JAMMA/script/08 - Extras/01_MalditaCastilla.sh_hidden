@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+######################
+## RPI2XXXXX aje_fr ##
+######################
+/opt/RPI2JAMMA/RPI2JAMMA_Change_hdmi_timings.sh MalditaCastilla
+echo 1 >/dev/rpi2x-intf
+cd /opt/RPI2JAMMA/emulateurs/MalditaCastilla
+./MalditaCastilla > /dev/null 2>&1
+sudo killall MalditaCastilla
+sync
+sudo /opt/RPI2JAMMA/RPI2JAMMA_Change_res -game none -modeline_list /opt/RPI2JAMMA/configs/modeline.txt
+echo 0 >/dev/rpi2x-intf
+clear
+tput reset
+sync
+exit 0

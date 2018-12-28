@@ -1,0 +1,8 @@
+_ALL_;modeline "320x224_60" 6.389760 320 344 362 416 224 236 237 256 -hsync -vsync
+segacd_256x224@59.92;modeline "256x224_NTSC" 5.370 256 274 299 341 224 236 239 262 -hsync -vsync
+segacd_320x224@59.92;modeline "320x224_NTSC" 6.700 320 336 367 426 224 236 239 262 -hsync -vsync
+segacd_256x240@49.70;modeline "256x240_PAL" 5.320 256 269 294 341 240 270 273 312 -hsync -vsync
+segacd_256x240@59.92;modeline "256x240_NTSC" 5.370 256 274 299 341 240 244 247 262 -hsync -vsync
+segacd_320x240@49.70;modeline "320x240_PAL" 6.660 320 336 367 426 240 270 273 312 -hsync -vsync
+segacd_320x240@59.92;modeline "320x240_NTSC" 6.700 320 336 367 426 240 244 247 262 -hsync -vsync
+segacd_320x224@49.70;modeline "320x224_PAL" 6.409312 320 348 366 416 224 264 267 310 -hsync -vsync

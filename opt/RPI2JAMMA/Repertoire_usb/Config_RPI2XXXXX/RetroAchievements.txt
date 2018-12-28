@@ -1,0 +1,6 @@
+cheevos_enable = "false"
+cheevos_test_unofficial = "false"
+cheevos_hardcore_mode_enable = "false"
+cheevos_username = ""
+cheevos_password = ""
+

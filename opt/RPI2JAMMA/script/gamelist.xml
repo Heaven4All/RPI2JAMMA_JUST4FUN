@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<name>01 - Shutdown</name>
+		<path>./01_Shutdown.sh</path>
+		<image>./images_pixel/shutdown.png</image>
+		<marquee>./images_full/shutdown.png</marquee>
+		<video>./videos/shutdown.mp4</video>
+		<desc>Use this to shutdown 
+properly your RPI2X</desc>
+	</game>
+	<game>
+		<name>02 - Restart System</name>
+		<path>./02_Restart System.sh</path>
+		<image>./images_pixel/reboot.png</image>
+		<marquee>./images_full/reboot.png</marquee>
+		<video>./videos/reboot.mp4</video>
+		<desc>Use this to restart 
+properly your RPI2X</desc>
+	</game>
+	<game>
+		<name>03 - Screen</name>
+		<path>./03 - Screen/</path>
+		<image>./images_pixel/screen.png</image>
+		<marquee>./images_full/screen.png</marquee>
+		<video>./videos/screen.mp4</video>
+		<desc>Various screen options
+for your RPI2X</desc>
+	</game>
+	<game>
+		<name>Switch to Vertical</name>
+		<path>./03 - Screen/Switch to Vertical.sh</path>
+		<image>./images_pixel/screen_vertical.png</image>
+		<marquee>./images_full/screen_vertical.png</marquee>
+		<video>./videos/screen_vertical.mp4</video>
+		<desc>For vertical games.
+Also known as Tate Mode.</desc>
+	</game>
+	<game>
+		<name>Switch to Horizontal</name>
+		<path>./03 - Screen/Switch to Horizontal.sh</path>
+		<image>./images_pixel/screen_horizontal.png</image>
+		<marquee>./images_full/screen_horizontal.png</marquee>
+		<video>./videos/screen_horizontal.mp4</video>
+		<desc>For horizontal games.
+Also known as Yoko Mode.</desc>
+	</game>
+	<game>
+		<name>04 - Tools</name>
+		<path>./04 - Tools/</path>
+		<image>./images_pixel/tools.png </image>
+		<marquee>./images_full/tools.png</marquee>
+		<video>./videos/tools.mp4</video>
+		<desc>Various Tools to repair,
+clean or prepare your RPI2X</desc>
+	</game>
+	<game>
+		<name>Clear Game Database</name>
+		<path>./04 - Tools/Clear Game Database.sh</path>
+		<image>./images_pixel/clear_database.png</image>
+		<marquee>./images_full/clear_database.png</marquee>
+		<video>./videos/clear_database.mp4</video>
+		<desc>Erase all datas</desc>
+	</game>
+	<game>
+		<name>Scrap All ROMs</name>
+		<path>./04 - Tools/Scrap All ROMs.sh</path>
+		<image>./images_pixel/scrap_xml.png</image>
+		<marquee>./images_full/scrap_xml.png</marquee>
+		<video>./videos/scrap_xml.mp4</video>
+		<desc>Download or update
+medias for your ROMS</desc>
+	</game>
+	<game>
+		<name>Verify USB key</name>
+		<path>./04 - Tools/Verify USB key.sh</path>
+		<image>./images_pixel/verify_usb.png</image>
+		<marquee>./images_full/verify_usb.png</marquee>
+		<video>./videos/verify_usb.mp4</video>
+		<desc>Check and repair your
+USB stick</desc>
+	</game>
+	<game>
+		<name>Switch to MAME 2003 core</name>
+		<path>./04 - Tools/Switch_MAME_2003.sh</path>
+		<desc>Switch the MAME 2003 core to the original version</desc>
+	</game>
+	<game>
+		<name>Switch to MAME 2003 PLUS core</name>
+		<path>./04 - Tools/Switch_MAME_2003_PLUS.sh</path>
+		<desc>Switch the MAME 2003 core to the plus version</desc>
+	</game>
+	<game>
+		<name>Emulationstation in 4 Buttons</name>
+		<path>./04 - Tools/EmulationStation_for_4_buttons.sh</path>
+		<desc>Switch the Emulationstation interface to use 4 Buttons</desc>
+	</game>
+	<game>
+		<name>Emulationstation in 6 Buttons</name>
+		<path>./04 - Tools/EmulationStation_for_6_buttons.sh</path>
+		<desc>Switch the Emulationstation interface to use 6 Buttons</desc>
+	</game>
+	<game>
+		<name>05 - NeoGeo</name>
+		<path>./05 - NeoGeo/</path>
+		<image>./images_pixel/neogeo.png</image>
+		<marquee>./images_full/neogeo.png</marquee>
+		<video>./videos/neogeo.mp4</video>
+		<desc>Play NEOGEO system as
+Arcade or Home console</desc>
+	</game>
+	<game>
+		<name>Switch to AES mode</name>
+		<path>./05 - NeoGeo/Switch to AES mode.sh</path>
+		<image>./images_pixel/neogeo_aes.png</image>
+		<marquee>./images_full/neogeo_aes.png</marquee>
+		<video>./videos/neogeo_aes.mp4</video>
+		<desc>Play NEOGEO games
+in AES home console mode</desc>
+	</game>
+	<game>
+		<name>Switch to MVS mode</name>
+		<path>./05 - NeoGeo/Switch to MVS mode.sh</path>
+		<image>./images_pixel/neogeo_mvs.png</image>
+		<marquee>./images_full/neogeo_mvs.png</marquee>
+		<video>./videos/neogeo_mvs.mp4</video>
+		<desc>Play NEOGEO games
+in arcade MVS mode</desc>
+	</game>
+	<game>
+		<name>08 - Extras</name>
+		<path>./08 - Extras/</path>
+		<image>./images_pixel/extra.png</image>
+		<marquee>./images_full/extra.png</marquee>
+		<video>./videos/extra.mp4</video>
+		<desc>Some extra games!
+Compiled for your RPI2X</desc>
+	</game>
+	<game>
+		<name>Maldita Castilla</name>
+		<path>./08 - Extras/01_MalditaCastilla.sh</path>
+		<image>./images_pixel/maldita_castilla.png</image>
+		<marquee>./images_full/maldita_castilla.png</marquee>
+		<video>./videos/maldita_castilla.mp4</video>
+		<desc>Locomalito 2012
+1 Player</desc>
+	</game>
+	<game>
+		<name>Super Crate Box</name>
+		<path>./08 - Extras/02_SuperCrateBox.sh</path>
+		<image>./images_pixel/super_crate_box.png</image>
+		<marquee>./images_full/super_crate_box.png</marquee>
+		<video>./videos/super_crate_box.mp4</video>
+		<desc>Vlambeer 2010
+1 Player</desc>
+	</game>
+	<game>
+		<name>09 - Wifi</name>
+		<path>./09 - WIFI/</path>
+		<image>./images_pixel/wifi.png</image>
+		<marquee>./images_full/wifi.png</marquee>
+		<video>./videos/wifi.mp4</video>
+		<desc>Options to enable or
+disable the WIFI connection</desc>
+	</game>
+        <game>
+			<name>10 - Infos</name>
+			<path>./10_Info.sh</path>
+			<desc>Show Informations about version, emulators, etc</desc>
+        </game>
+	<game>
+		<name>Enable Wifi</name>
+		<path>./09 - WIFI/Enable.sh</path>
+		<image>./images_pixel/wifi_on.png</image>
+		<marquee>./images_full/wifi_on.png</marquee>
+		<video>./videos/wifi_on.mp4</video>
+		<desc>To enable WIFI connection
+on your RPI2X</desc>
+	</game>
+	<game>
+		<name>Disable Wifi</name>
+		<path>./09 - WIFI/Disable.sh</path>
+		<image>./images_pixel/wifi_off.png</image>
+		<marquee>./images_full/wifi_off.png</marquee>
+		<video>./videos/wifi_off.mp4</video>
+		<desc>To disable WIFI connection
+on your RPI2X</desc>
+	</game>
+	<game>
+		<path>./03 - Screen/AdvanceMAME config.sh</path>
+		<name>Advancemame Config</name>
+		<desc>To update AdvanceMAME
+settings</desc>
+		<image>./images_pixel/config_advmame.png</image>
+		<video>./videos/config_advmame.mp4</video>
+		<marquee>./images_full/config_advmame.png</marquee>
+		<playcount>2</playcount>
+		<lastplayed>20180307T225850</lastplayed>
+	</game>
+	<game>
+		<path>./03 - Screen/Display test.sh</path>
+		<name>Display test</name>
+		<desc>Use this to adjust your
+screen (color, size,...)</desc>
+		<image>./images_pixel/display_test.png</image>
+		<video>./videos/display_test.mp4</video>
+		<marquee>./images_full/display_test.png</marquee>
+		<playcount>1</playcount>
+		<lastplayed>20180319T224540</lastplayed>
+	</game>
+	<game>
+		<name>07 - Megadrive - MegaCD</name>
+		<path>./07 - Megadrive - MegaCD/</path>
+		<image>./images_pixel/megadrive.png</image>
+		<marquee>./images_full/megadrive.png</marquee>
+		<desc>Change Megadrive region</desc>
+	</game>
+	<game>
+		<name>Switch to automatic region</name>
+		<path>./07 - Megadrive - MegaCD/Region - Switch to automatic.sh</path>
+		<desc>Automatically change the region</desc>
+	</game>
+	<game>
+		<name>Switch to PAL region</name>
+		<path>./07 - Megadrive - MegaCD/Region - Switch to PAL.sh</path>
+		<image>./images_pixel/drapeau_europe.jpg</image>
+		<marquee>./images_full/drapeau_europe.jpg</marquee>
+		<desc>Play games as PAL region</desc>
+	</game>
+	<game>
+		<name>Switch to NTSC-J region</name>
+		<path>./07 - Megadrive - MegaCD/Region - Switch to NTSC-J.sh</path>
+		<image>./images_pixel/drapeau_japon.png</image>
+		<marquee>./images_full/drapeau_japon.png</marquee>
+		<desc>Play games as Japanese region</desc>
+	</game>
+	<game>
+		<name>Switch to NTSC-U region</name>
+		<path>./07 - Megadrive - MegaCD/Region - Switch to NTSC-U.sh</path>
+		<image>./images_pixel/drapeau_us.jpg</image>
+		<marquee>./images_full/drapeau_us.jpg</marquee>
+		<desc>Play games as US region</desc>
+	</game>
+</gameList>

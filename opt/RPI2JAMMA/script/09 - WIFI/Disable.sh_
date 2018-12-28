@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+######################
+## RPI2XXXXX aje_fr ##
+######################
+
+sudo sed -i 's/#_toverlay=pi3-disable-wifi/dtoverlay=pi3-disable-wifi/g' /boot/config.txt
+sudo mv Enable.sh_ Enable.sh
+sudo mv Disable.sh Disable.sh_
+sync
+sudo reboot

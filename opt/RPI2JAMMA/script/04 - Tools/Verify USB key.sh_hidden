@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+######################
+## RPI2XXXXX aje_fr ##
+######################
+
+point_montage=$(mount | grep "/media/usb" | cut -d" " -f1)
+clear
+setterm -foreground white && clear
+echo "Checking USB key" >/dev/tty
+sudo umount $point_montage
+sudo fsck -a $point_montage >/dev/tty
+echo "Rebooting" >/dev/tty
+sudo reboot

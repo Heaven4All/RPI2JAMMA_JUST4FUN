@@ -1,0 +1,3 @@
+# To boot directly a game, please specify the system and rom name, for example :
+# system=mame
+# game=cps1/sf2ce.zip

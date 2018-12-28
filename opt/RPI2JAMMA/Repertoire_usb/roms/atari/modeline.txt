@@ -1,0 +1,2 @@
+//RPI2JAMMA (c) aje_fr
+_ALL_;modeline "320x200_50" 6.406400 320 344 362 416 200 239 243 308 -hsync -vsync

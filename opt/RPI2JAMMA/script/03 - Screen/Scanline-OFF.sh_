@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+######################
+## RPI2XXXXX aje_fr ##
+######################
+clear
+sudo sed -i 's/video_shader_enable = "true"/video_shader_enable = "false"/g' /opt/RPI2JAMMA/retroarch/retroarch.cfg.ok
+sudo sed -i 's/video_shader_enable = "true"/video_shader_enable = "false"/g' /opt/RPI2JAMMA/retroarch/retroarch.cfg
+sync
+clear

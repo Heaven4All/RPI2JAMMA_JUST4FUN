@@ -1,0 +1,33 @@
+###########################
+## RPI2XXXX B13 - aje_fr ##
+###########################
+
+## MAME 2003
+- ROMset 0.78
+- Version from October 29 2018
+
+## MAME 2003 Plus
+- ROMset 0.78
+- Version from December 2 2018
+
+## MAME 2010
+- ROMset 0.139
+- Version from October 29 2018
+
+## FBAlpha
+- ROMset v0.2.97.44
+- Version from December 20 2018
+
+## FBAlpha 2012
+- ROMset v0.2.97.24
+- Version from October 29 2018
+
+## AdvMame
+- AdvanceMAME 3.9-12-g0038b8d3
+  Version from December 20 2018
+
+## Retroarch
+- Version from December 20 2018
+
+## Emulationstation
+- Version from December 20 2018
